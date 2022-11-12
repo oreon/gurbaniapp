@@ -53,7 +53,7 @@ export function BottomTabNavigator() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Daily readings" component={SettingsScreen} />
     </Tab.Navigator>
   );
 }

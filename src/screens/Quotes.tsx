@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollView } from "react-native";
 import {
   Layout,
   Section,
@@ -20,18 +21,20 @@ export default function QuotesScreen({ route, navigation }) {
   let texts = qt ? qt.texts : [["No quotes found"]];
 
   return (
-    <Layout>
-      {/* <TopNav middleContent={mc} /> */}
+    <ScrollView>
+      <Layout>
+        {/* <TopNav middleContent={mc} /> */}
 
-      {texts.map((text) => (
-        <Section>
-          <SectionContent>
-            <Text size="h2">{text[0]}</Text>
-            <Text size="xl">{text[1]}</Text>
-            <Text size="h3">{text[2]}</Text>
-          </SectionContent>
-        </Section>
-      ))}
-    </Layout>
+        {texts.map((text) => (
+          <Section>
+            <SectionContent>
+              {text.map((q) => (
+                <Text size="xl">{q}</Text>
+              ))}
+            </SectionContent>
+          </Section>
+        ))}
+      </Layout>
+    </ScrollView>
   );
 }
