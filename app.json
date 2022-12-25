@@ -2,7 +2,7 @@
   "expo": {
     "name": "gurbaniwisdom",
     "slug": "gurbaniwisdom",
-    "version": "1.0.0",
+    "version": "2.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,10 +21,12 @@
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.jsingh76.gurbaniwisdom"
     },
     "web": {
       "favicon": "./assets/favicon.png"

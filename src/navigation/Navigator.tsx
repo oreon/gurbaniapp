@@ -6,6 +6,7 @@ const Tab = createBottomTabNavigator();
 
 import React from "react";
 import { Text } from "react-native-rapi-ui";
+import DailyScreen from "../screens/Daily";
 import HomeScreen from "../screens/Home";
 import QuotesScreen from "../screens/Quotes";
 
@@ -41,19 +42,11 @@ export function RootNavigator({ navigation }) {
   );
 }
 
-export function SettingsScreen() {
-  return (
-    <>
-      <Text size="h2"> Read a shabad </Text>
-    </>
-  );
-}
-
 export function BottomTabNavigator() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Daily readings" component={SettingsScreen} />
+      <Tab.Screen name="Daily readings" component={DailyScreen} />
     </Tab.Navigator>
   );
 }
